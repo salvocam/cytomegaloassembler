@@ -157,7 +157,7 @@ if performDeNovoAssembly == "yes" or performDeNovoAssembly == "Yes":
     logFile.write("Trying to elong the Denovo assembly step \n")
     now = datetime.datetime.now()
     logFile.write("Process started at "+now.strftime("%Y-%m-%d %H:%M")+"\n")
-    os.system("./Software/SPAdes-3.12.0-Linux/bin/spades.py -1 "+read1+" -2 "+read2+" -o ./3_DenovoAssembly/")
+    os.system("~/Software/SPAdes-3.12.0-Linux/bin/spades.py -1 "+read1+" -2 "+read2+" -o ./3_DenovoAssembly/")
     now = datetime.datetime.now()
     logFile.write("Process started at "+now.strftime("%Y-%m-%d %H:%M")+"\n")
     os.system("python ./Software/representative.py ./3_DenovoAssembly/scaffolds.fasta")
